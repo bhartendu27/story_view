@@ -80,11 +80,12 @@ class StoryItem {
             bottom: Radius.circular(roundedBottom ? 8 : 0),
           ),
         ),
-        padding: EdgeInsets.symmetric(
-          horizontal: 24,
-          vertical: 16,
-        ),
+//         padding: EdgeInsets.symmetric(
+//           horizontal: 24,
+//           vertical: 16,
+//         ),
         child: Scaffold(
+          backgroundColor: backgroundColor,
           bottomSheet: bottomWidget,
           body: Center(
           child: Text(
