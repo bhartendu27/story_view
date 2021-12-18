@@ -58,6 +58,7 @@ class StoryItem {
     bool roundedTop = false,
     bool roundedBottom = false,
     Duration? duration,
+    Widget? bottomWidget,
   }) {
     double contrast = ContrastHelper.contrast([
       backgroundColor.red,
@@ -83,7 +84,9 @@ class StoryItem {
           horizontal: 24,
           vertical: 16,
         ),
-        child: Center(
+        child: Scaffold(
+          bottomSheet: bottomWidget,
+          body: Center(
           child: Text(
             title,
             style: textStyle?.copyWith(
@@ -96,6 +99,7 @@ class StoryItem {
             textAlign: TextAlign.center,
           ),
         ),
+          ),
         //color: backgroundColor,
       ),
       shown: shown,
@@ -174,6 +178,7 @@ class StoryItem {
     bool roundedTop = true,
     bool roundedBottom = false,
     Duration? duration,
+    
   }) {
     return StoryItem(
       ClipRRect(
